@@ -276,7 +276,7 @@ with gr.Blocks(css=css) as demo:
     generate.click(inference, inputs=inputs, outputs=outputs)
 
     ex = gr.Examples([
-        [models[0].name, "South asian 55 years old woman with shoulder length hair, wearing glasses, looking at computer screen, concentrating, in the office", 7.5, 25],
+        [models[1].name, "South asian 55 years old woman with shoulder length hair, wearing glasses, looking at computer screen, concentrating, in the office", 7.5, 25],
     ], inputs=[model_name, prompt, guidance, steps], outputs=outputs, fn=inference, cache_examples=False)
 
 
