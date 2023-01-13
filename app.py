@@ -209,9 +209,9 @@ def replace_nsfw_images(results):
         results.images[i] = Image.open("nsfw.png")
     return results.images
 
-css = """.finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:20rem}
-"""
-with gr.Blocks(css=css) as demo:
+
+with gr.Blocks(css=".finetuned-diffusion-div div{display:inline-flex;align-items:center;gap:.8rem;font-size:1.75rem}.finetuned-diffusion-div div h1{font-weight:900;margin-bottom:7px}.finetuned-diffusion-div p{margin-bottom:10px;font-size:94%}a{text-decoration:underline}.tabs{margin-top:0;margin-bottom:0}#gallery{min-height:20rem}
+") as demo:
     gr.HTML(
         f"""
             <div class="finetuned-diffusion-div">
